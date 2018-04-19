@@ -183,7 +183,7 @@ Loading data from a file (here its a csv)
                                  :input-split file-split))
 
 ;; lets look at some data
-(println (next-record! :rr csv-rr :as-code? false))
+(println (next-record! csv-rr :as-code? false))
 ;; => #object[java.util.ArrayList 0x2473e02d [1, 10, 1, 11, 1, 13, 1, 12, 1, 1, 9]]
 ;; this is our first line from the csv
 
