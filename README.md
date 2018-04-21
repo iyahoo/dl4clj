@@ -210,7 +210,7 @@ Loading data from a file (here its a csv)
                        :label-idx -1
                        :n-possible-labels 10))
 
-(str (next-example! :iter rr-ds-iter :as-code? false))
+(str (next-example! rr-ds-iter :as-code? false))
 ;; =>
 ;;===========INPUT===================
 ;;[1.00, 10.00, 1.00, 11.00, 1.00, 13.00, 1.00, 12.00, 1.00, 1.00]
@@ -317,7 +317,7 @@ Loading data from a file (here its a csv)
 (def ds-with-single-example (new-ds :input [1 2 3 4]
                                     :output [0.0 1.0 0.0]))
 
-(as-list :ds ds-with-single-example :as-code? false)
+(as-list ds-with-single-example :as-code? false)
 ;; =>
 ;; #object[java.util.ArrayList 0x5d703d12
 ;;[===========INPUT===================
