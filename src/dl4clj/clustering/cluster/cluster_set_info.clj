@@ -1,5 +1,5 @@
 (ns dl4clj.clustering.cluster.cluster-set-info
-  (:import [org.deeplearning4j.clustering.cluster.info ClusterSetInfo]))
+  (:import [org.deeplearning4j.clustering.info ClusterSetInfo]))
 
 ;; same considerations from cluster-info apply here
 
