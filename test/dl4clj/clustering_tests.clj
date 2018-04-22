@@ -137,10 +137,10 @@
 ;; (def add-distance-to-cluster-set (set-accumulation! :cluster-set (new-cluster-set)
 ;;                                                     :distance-fn "euclidean"))
 
-(def cluster-set (new-cluster-set :distance-fn "euclidean"))
+;; (def cluster-set (new-cluster-set :distance-fn "euclidean"))
 
-(is (= (get-accumulation cluster-set)
-       (get-accumulation add-distance-to-cluster-set)))
+;; (is (= (get-accumulation cluster-set)
+;;        (get-accumulation add-distance-to-cluster-set)))
 
 ;; two ways to add clusters to a cluster set
 
