@@ -7,8 +7,8 @@
   [& {:keys [thread-safe?]
       :as opts}]
   (if (contains? opts :thread-safe?)
-    (ClusterSetInfo. thread-safe?)
-    (ClusterSetInfo.)))
+    (ClusterSetInfo. false thread-safe?)
+    (ClusterSetInfo. false)))
 
 (defn add-cluster-info
   [& {:keys [info cluster-id]}]

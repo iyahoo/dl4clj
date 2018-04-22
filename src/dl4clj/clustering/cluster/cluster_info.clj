@@ -12,8 +12,8 @@
   [& {:keys [thread-safe?]
       :as opts}]
   (if (contains? opts :tread-safe?)
-    (ClusterInfo. thread-safe?)
-    (ClusterInfo.)))
+    (ClusterInfo. thread-safe? false)
+    (ClusterInfo. false)))
 
 (defn get-avg-point-distance-from-center
   [cluster-info]

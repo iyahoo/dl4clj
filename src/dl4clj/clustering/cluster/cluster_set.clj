@@ -6,8 +6,8 @@
   [& {:keys [distance-fn]
       :as opts}]
   (if (contains? opts :distance-fn)
-    (ClusterSet. distance-fn)
-    (ClusterSet.)))
+    (ClusterSet. distance-fn false)
+    (ClusterSet. false)))
 
 (defn add-new-cluster-with-center!
   [& {:keys [cluster-set center-point]}]
