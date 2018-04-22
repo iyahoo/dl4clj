@@ -134,8 +134,8 @@
 ;; cluster can be completley empty or start with a distance fn
 ;; if they start empty, you can add a distance fn
 
-(def add-distance-to-cluster-set (set-accumulation! :cluster-set (new-cluster-set)
-                                                    :distance-fn "euclidean"))
+;; (def add-distance-to-cluster-set (set-accumulation! :cluster-set (new-cluster-set)
+;;                                                     :distance-fn "euclidean"))
 
 (def cluster-set (new-cluster-set :distance-fn "euclidean"))
 
