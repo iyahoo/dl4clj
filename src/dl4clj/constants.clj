@@ -1,10 +1,11 @@
 (ns dl4clj.constants
   (:require [clojure.string :as s]
             [dl4clj.utils :refer [generic-dispatching-fn camelize]])
-  (:import [org.deeplearning4j.nn.conf GradientNormalization LearningRatePolicy
+  (:import [org.deeplearning4j.nn.conf GradientNormalization ;; LearningRatePolicy
             Updater BackpropType ConvolutionMode]
            [org.deeplearning4j.nn.conf.layers ConvolutionLayer$AlgoMode
-            RBM$VisibleUnit RBM$HiddenUnit
+            ;; RBM$VisibleUnit
+            ;; RBM$HiddenUnit
             PoolingType]
            [org.deeplearning4j.nn.conf.inputs InputType]
            [org.deeplearning4j.nn.api OptimizationAlgorithm MaskState
@@ -25,10 +26,11 @@
            [org.apache.spark.storage StorageLevel]
 
            ;; clustering
-           [org.deeplearning4j.clustering.algorithm.optimisation
+           [org.deeplearning4j.clustering.optimisation
             ClusteringOptimization
             ClusteringOptimizationType]
-           [org.deeplearning4j.clustering.algorithm.strategy
+
+           [org.deeplearning4j.clustering.strategy
             ClusteringStrategy
             ClusteringStrategyType]))
 
@@ -73,8 +75,8 @@
   (constants #(GradientNormalization/valueOf %) (:gradient-normalization opts) :camel? true))
 ;; https://deeplearning4j.org/doc/org/deeplearning4j/nn/conf/GradientNormalization.html
 
-(defmethod value-of :learning-rate-policy [opts]
-  (constants #(LearningRatePolicy/valueOf %) (:learning-rate-policy opts) :camel? true))
+;; (defmethod value-of :learning-rate-policy [opts]
+;;   (constants #(LearningRatePolicy/valueOf %) (:learning-rate-policy opts) :camel? true))
 ;; https://deeplearning4j.org/doc/org/deeplearning4j/nn/conf/LearningRatePolicy.html
 
 (defmethod value-of :updater [opts]
@@ -89,12 +91,12 @@
   (constants #(LossFunctions$LossFunction/valueOf %) (:loss-fn opts)))
 ;; http://nd4j.org/doc/org/nd4j/linalg/lossfunctions/LossFunctions.LossFunction.html
 
-(defmethod value-of :hidden-unit [opts]
-  (constants #(RBM$HiddenUnit/valueOf %) (:hidden-unit opts)))
+;; (defmethod value-of :hidden-unit [opts]
+;;   (constants #(RBM$HiddenUnit/valueOf %) (:hidden-unit opts)))
 ;; https://deeplearning4j.org/doc/org/deeplearning4j/nn/conf/layers/RBM.HiddenUnit.html
 
-(defmethod value-of :visible-unit [opts]
-  (constants #(RBM$VisibleUnit/valueOf %) (:visible-unit opts)))
+;; (defmethod value-of :visible-unit [opts]
+;;   (constants #(RBM$VisibleUnit/valueOf %) (:visible-unit opts)))
 ;; https://deeplearning4j.org/doc/org/deeplearning4j/nn/conf/layers/RBM.VisibleUnit.html
 
 (defmethod value-of :convolution-mode [opts]

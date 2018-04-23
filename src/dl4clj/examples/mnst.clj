@@ -1,7 +1,7 @@
 (ns ^{:doc "recreation of: https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/feedforward/mnist/MLPMnistSingleLayerExample.java"}
     mnst
   (:require [dl4clj.nn.conf.builders.multi-layer-builders :as mlb]
-            [dl4clj.nn.conf.builders.nn-conf-builder :as nn-conf]
+            [dl4clj.nn.conf.builders.nn :as nn-conf]
             [dl4clj.nn.conf.builders.builders :as l]
             [dl4clj.nn.multilayer.multi-layer-network :as mln]
             [dl4clj.spark.masters.param-avg :as master]

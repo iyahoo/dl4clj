@@ -10,7 +10,8 @@
   (:import
    [org.deeplearning4j.nn.conf.layers ActivationLayer$Builder
     OutputLayer$Builder RnnOutputLayer$Builder AutoEncoder$Builder
-    RBM$Builder GravesBidirectionalLSTM$Builder GravesLSTM$Builder
+    ;; RBM$Builder
+    GravesBidirectionalLSTM$Builder GravesLSTM$Builder
     BatchNormalization$Builder ConvolutionLayer$Builder DenseLayer$Builder
     EmbeddingLayer$Builder LocalResponseNormalization$Builder
     SubsamplingLayer$Builder LossLayer$Builder CenterLossOutputLayer$Builder
